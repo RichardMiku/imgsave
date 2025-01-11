@@ -9,7 +9,7 @@ tags:
 ---
 imgname: {}
 <!--more-->
-<img src='source/images/{}' alt='{}' width=75% height=75%>"""
+<img src='/images/{}' alt='{}' width=75% height=75%>"""
 
 img_str_list = []
 img_list = []
@@ -21,7 +21,7 @@ def list_files_in_directory(directory):
         files = os.listdir(directory)
         current_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         for file in files:
-            print(img_insert.format(file, current_date, file, file))
+            print(f"Processing file {file}")
             img_str_list.append(file)
     except FileNotFoundError:
         print(f"The directory {directory} does not exist")
