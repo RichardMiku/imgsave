@@ -7,6 +7,7 @@ title: {}
 date: {}
 tags:
 ---
+imgname: {}
 <!--more-->
 <img src='source/images/{}' alt='{}' width=75% height=75%>"""
 
@@ -34,4 +35,4 @@ list_files_in_directory(directory_path)
 # Write the list of images to a file
 for img_name in img_str_list:
     with open(f'{post_dir}/{img_name}.md', 'w') as f:
-        f.write(img_insert.format(img_name, datetime.now().strftime('%Y-%m-%d %H:%M:%S'), img_name, img_name))
+        f.write(img_insert.format(img_name, datetime.now().strftime('%Y-%m-%d %H:%M:%S'), img_name, img_name, img_name))
